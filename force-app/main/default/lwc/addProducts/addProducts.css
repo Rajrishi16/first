@@ -1,0 +1,54 @@
+.cell-breakWord {
+   word-wrap: break-word !important;
+}
+.heading {
+    font-size : 20px;
+}
+
+.sort{
+    display: inline-flex;
+    padding: .3rem;
+}
+.sort div{
+    margin: 0 3px;
+}
+.divCursor {
+    cursor : pointer;
+}
+.caption, th, td {
+    vertical-align: top;
+}
+.scrollit {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height:900px;
+}
+
+.add-to-cart button{
+    padding: 8px 10px 8px 15px!important;
+    background-color: #60c607;
+    background-image: -moz-linear-gradient(180deg, #60c607 0%, #448f03 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #60c607), color-stop(100%, #448f03));
+    background-image: -webkit-linear-gradient(180deg, #60c607 0%, #448f03 100%);
+    background-image: -o-linear-gradient(180deg, #60c607 0%, #448f03 100%);
+    background: -ms-linear-gradient(180deg, #60c607 0%, #448f03 100%);
+    background: linear-gradient(180deg, #60c607 0%, #448f03 100%);
+    box-shadow: inset 0 1px 3px rgba(255,255,255,0.9), inset 0 -1px 3px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+}
+
+.add-to-cart button .slds-icon-text-default{
+    fill: #fff;
+}

@@ -1,0 +1,62 @@
+<template>
+            <div class="slds-box" style="background-color: #141414;">
+                <lightning-layout multiple-rows style="background-color: #141414;">
+                    <template if:true={records} iterator:it={records}>
+                       
+                            <lightning-layout-item if:true={it.first} key={it.value.id} size="12" padding="around-small" small-device-size="12" medium-device-size="12" large-device-size="12" >
+                                <div class="custom-box slds-text-align_center">
+                                    <a href={getListViewId} style="text-decoration: none;">
+                                       <ul style="color:white;font-weight:bold;font-size:3rem">
+                                           <li class="slds-text-heading--large">{it.value.count}</li>
+                                           <li class="slds-text-heading--medium"> {it.value.name}</li>
+                                       </ul>                                  
+                                    </a>
+                                </div>
+                            </lightning-layout-item>           
+                      
+                            <lightning-layout-item if:false={it.first} key={it.value.id} size="12" padding="around-small" small-device-size="6" medium-device-size="6" large-device-size="6">
+                                <div class="custom-box slds-text-align_center">
+                                     <a href={getListViewId} style="text-decoration: none;">
+                                        <ul style="color:white;font-weight:bold;font-size:2rem">
+                                           <li class="slds-text-heading--medium">{it.value.count}</li>
+                                           <li class="slds-text-heading--small"> {it.value.name}</li>
+                                       </ul>  
+                                    </a>
+                                </div>
+                            </lightning-layout-item>
+                     
+                    </template>                   
+                </lightning-layout>
+            </div>
+            <!-- <div class="slds-m-around_medium">
+                <lightning-layout multiple-rows>
+                    <template if:true={records} iterator:it={records}>
+                        <div key={it.value.id} if:true={it.first} class="list-first">
+                            <lightning-layout-item key={it.value.id} size="12" large-device-size="12" padding="around-small">
+                                <a href={getListViewId} style="text-decoration: none">
+                                    <div class="custom-box slds-text-heading_large slds-text-align_center" style="font-size: 3rem;">
+                                        {it.value.count}
+                                    </div>
+                                    <div class="custom-box slds-text-heading_small slds-text-align_center">
+                                        {it.value.name}
+                                    </div>
+                                </a>
+                            </lightning-layout-item>
+                        </div>
+                        <div key={it.value.id} if:false={it.first}>
+                            <lightning-layout-item key={it.value.id} size="6" large-device-size="6" padding="around-small">
+                                <a href={getListViewId} style="text-decoration: none">
+                                    <div class="custom-box slds-text-heading_large slds-text-align_center" style="font-size: 3rem;">
+                                        {it.value.count}
+                                    </div>
+                                    <div class="custom-box slds-text-heading_small slds-text-align_center">
+                                        {it.value.name}
+                                    </div>
+                                </a>
+                            </lightning-layout-item>
+                        </div>
+                    </template>
+                </lightning-layout>
+                   
+            </div> -->
+</template>
